@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  /* ── Filter Buttons */
+  /* ── Filter Buttons ─────────────────────────── */
   const filterBtns = document.querySelectorAll(".filter-btn");
   const cards = document.querySelectorAll(".card");
 
@@ -40,7 +40,7 @@ document.addEventListener("DOMContentLoaded", () => {
           // Stagger re-entrance animation
           card.style.animationDelay = `${i * 0.05}s`;
           card.classList.remove("fade-in");
-          void card.offsetWidth;
+          void card.offsetWidth; // Trigger reflow
           card.classList.add("fade-in");
         } else {
           card.classList.add("hidden");
@@ -50,6 +50,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
+  /* ── Modal Overlay Creation ─────────────────── */
   const modalOverlay = document.createElement("div");
   modalOverlay.className = "modal-overlay";
   modalOverlay.setAttribute("role", "dialog");
@@ -107,19 +108,18 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // Close button
+  // Close button events
   modalClose.addEventListener("click", closeModal);
 
-  // Click outside modal content
   modalOverlay.addEventListener("click", (e) => {
     if (e.target === modalOverlay) closeModal();
   });
 
-  // ESC key
   document.addEventListener("keydown", (e) => {
     if (e.key === "Escape") closeModal();
   });
 
+  /* ── Intersection Observer ──────────────────── */
   if ("IntersectionObserver" in window) {
     const io = new IntersectionObserver(
       (entries) => {
@@ -130,7 +130,7 @@ document.addEventListener("DOMContentLoaded", () => {
           }
         });
       },
-      { threshold: 0.12 },
+      { threshold: 0.12 }
     );
 
     cards.forEach((card) => {
@@ -142,7 +142,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  /* ── Top-bar marquee fallback*/
+  /* ── Top-bar Marquee Fallback ───────────────── */
   const marquee = document.querySelector("marquee.top-bar");
   if (marquee) {
     marquee.setAttribute("scrollamount", "4");
