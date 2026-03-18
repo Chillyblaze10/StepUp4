@@ -61,6 +61,8 @@ body {
   }
 }
 
+
+
 /* ── Header / Nav ──────────────────────────────── */
 header {
   position: sticky;
@@ -131,6 +133,23 @@ nav {
 }
 
 .nav-icons img:hover {
+  opacity: 1;
+}
+
+/* ── Base Icon States ──────────────────────────── */
+.mobile-icons {
+  display: none; /* Strictly hidden on desktop */
+}
+
+.mobile-icons img {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  opacity: 0.7;
+  transition: opacity 0.2s;
+}
+
+.mobile-icons img:hover {
   opacity: 1;
 }
 
@@ -633,12 +652,26 @@ footer {
     transition: max-height 0.35s ease;
   }
   .nav-links.open {
-    max-height: 320px;
+    max-height: 450px;
   }
   .nav-links li a {
     display: block;
     padding: 14px 24px;
     border-top: 1px solid var(--warm-mid);
+  }
+  /* Hide the header icons. The Hamburger will now snap to the far right. */
+  .desktop-icons {
+    display: none; 
+  }
+  
+  /* Reveal the icons inside the expanded menu */
+  .mobile-icons {
+    display: flex;
+    gap: 32px;
+    padding: 24px;
+    border-top: 1px solid var(--warm-mid);
+    justify-content: center; /* Centers the icons at the bottom of the menu */
+    background: var(--off-white);
   }
   .hero {
     padding: 28px 20px 20px;
