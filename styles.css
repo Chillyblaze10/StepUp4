@@ -1,0 +1,346 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
+:root {
+    --primary-color: #F38E54;
+    --secondary-color: #000000;
+    --bg-light: #FFFFFF;
+    --bg-accent: #F5EDEC;
+    --text-main: #333333;
+    --text-heading: #000000;
+    --text-white: #FFFFFF;
+    --border-light: rgba(0, 0, 0, 0.1);
+    --transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    --header-height: 85px;
+    --ticker-height: 75px;
+}
+
+/* --- Base Styles --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+    color: var(--text-main);
+    background-color: var(--bg-light);
+    overflow-x: hidden;
+}
+
+h1, h2, h3, h4 {
+    color: var(--text-heading);
+    font-weight: 700;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: var(--transition);
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* --- Animations --- */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideInRight {
+    from { transform: translateX(100%); }
+    to { transform: translateX(0); }
+}
+
+.animate-fade-in {
+    animation: fadeIn 0.8s ease-out forwards;
+}
+
+/* --- Layout Components --- */
+
+/* Ticker Bar */
+.ticker-bar {
+    background-color: var(--secondary-color);
+    color: var(--text-white);
+    height: var(--ticker-height);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 0.2px;
+    position: relative;
+    z-index: 1001;
+    text-align: center;
+    padding: 0 1.5rem;
+}
+
+.ticker-content {
+    white-space: nowrap;
+}
+
+/* Navbar */
+.navbar {
+    background-color: var(--bg-light);
+    height: var(--header-height);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 60px;
+    z-index: 1000;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.logo {
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--primary-color);
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    font-size: 1rem;
+    font-weight: 400;
+    color: #000000;
+}
+
+.nav-links a:hover, .nav-links a.active {
+    color: #000000;
+    font-weight: 600;
+}
+
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.icon-btn {
+    cursor: pointer;
+    font-size: 1.25rem;
+}
+
+/* Hero Section */
+.hero {
+    background-color: var(--bg-accent);
+    padding: 64px 60px 56px;
+    text-align: left;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    line-height: 1.1;
+}
+
+.hero p {
+    font-size: 1.25rem;
+    color: #000000;
+    max-width: 720px;
+}
+
+/* Board Grid Section */
+.board-section {
+    padding: 100px 5%;
+}
+
+.board-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 60px 40px;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+.board-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: var(--transition);
+}
+
+.board-card:hover {
+    transform: translateY(-15px);
+}
+
+.member-img-wrapper {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+    border-radius: 12px;
+    margin-bottom: 25px;
+    background-color: #eee;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+.member-img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+.board-card:hover .member-img-wrapper img {
+    transform: scale(1.08);
+}
+
+.board-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 8px;
+}
+
+.member-role {
+    color: var(--primary-color);
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+
+.member-bio {
+    font-size: 1rem;
+    color: #666;
+    max-width: 280px;
+    line-height: 1.4;
+}
+
+/* Description Section */
+.leadership-info {
+    background-color: var(--bg-accent);
+    padding: 120px 5%;
+    text-align: center;
+}
+
+.info-content {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.info-content h2 {
+    font-size: 3rem;
+    margin-bottom: 40px;
+}
+
+.info-content p {
+    font-size: 1.5rem;
+    line-height: 1.8;
+    color: #444;
+}
+
+/* Footer Styles */
+footer {
+    background-color: var(--secondary-color);
+    color: var(--text-white);
+    padding: 80px 5% 0;
+}
+
+.footer-main {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 60px;
+    padding-bottom: 60px;
+}
+
+.footer-brand h2 {
+    color: var(--text-white);
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+}
+
+.footer-brand p {
+    font-size: 1.125rem;
+    max-width: 400px;
+    opacity: 0.8;
+}
+
+.footer-col h4 {
+    color: var(--text-white);
+    font-size: 1.25rem;
+    margin-bottom: 25px;
+}
+
+.footer-col ul {
+    list-style: none;
+}
+
+.footer-col ul li {
+    margin-bottom: 12px;
+    opacity: 0.7;
+    transition: var(--transition);
+}
+
+.footer-col ul li:hover {
+    opacity: 1;
+    color: var(--primary-color);
+}
+
+.footer-col .contact-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 15px;
+}
+
+.social-links {
+    display: flex;
+    gap: 20px;
+}
+
+.social-icon {
+    width: 24px;
+    height: 24px;
+    fill: white;
+    transition: var(--transition);
+}
+
+.social-icon:hover {
+    fill: var(--primary-color);
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 30px 0;
+    text-align: center;
+    font-size: 0.9rem;
+    opacity: 0.5;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+    .footer-main {
+        grid-template-columns: 1fr 1fr;
+    }
+    .footer-brand {
+        grid-column: span 2;
+    }
+}
+
+@media (max-width: 768px) {
+    .ticker-bar {
+        font-size: 1rem;
+        height: 60px;
+    }
+    .navbar {
+        padding: 0 24px;
+    }
+    .hero h1 { font-size: 2.5rem; }
+    .nav-links { display: none; } /* Mobile nav would need a toggle */
+    .info-content h2 { font-size: 2.2rem; }
+    .info-content p { font-size: 1.1rem; }
+    .footer-main {
+        grid-template-columns: 1fr;
+    }
+    .footer-brand {
+        grid-column: span 1;
+    }
+}
