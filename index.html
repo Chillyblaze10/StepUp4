@@ -11,15 +11,17 @@
       href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=DM+Sans:wght@300;400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
     <header>
-      <marquee class="top-bar" scrollamount="4" behavior="scroll" direction="left">
-        StepUp4 Fashion Show – July 2026 &nbsp;|&nbsp; Book your styling
-        appointment today &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; StepUp4 Fashion Show –
-        July 2026 &nbsp;|&nbsp; Book your styling appointment today
-      </marquee>
+      <div class="top-bar-container">
+  <div class="top-bar-ticker">
+    StepUp4 Fashion Show – July 2026 &nbsp;|&nbsp; Book your styling appointment today &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+    StepUp4 Fashion Show – July 2026 &nbsp;|&nbsp; Book your styling appointment today
+  </div>
+</div>
 
       <nav>
         <div class="nav-logo">StepUp4</div>
@@ -32,9 +34,9 @@
           <li><a href="./index.html" class="active">Home</a></li>
           <li><a href="./product.html">Collections</a></li>
           <li><a href="./board.html">Board of Trustees</a></li>
-          <li><a href="#">Events</a></li>
-          <li><a href="#">Inquiries & Appointments</a></li>
-          <li><a href="#">About</a></li>
+          <li><a href="./events.html">Events</a></li>
+          <li><a href="./inquiries.html">Inquiries & Appointments</a></li>
+          <li><a href="./about.html">About</a></li>
         </ul>
 
         <ul class="nav-icons">
@@ -50,7 +52,7 @@
         <p>Discover sophisticated fashion crafted for you.</p>
         <div class="hero-actions">
           <a href="./product.html" class="cta-btn">Explore</a>
-          <a href="#" class="cta-btn outline">Appointments</a>
+          <a href="./inquiries.html" class="cta-btn outline">Appointments</a>
         </div>
       </section>
 
@@ -96,20 +98,30 @@
       <section class="section-container">
         <h2 class="section-title">Featured Event</h2>
         
-        <div class="event-grid">
-          <div class="event-img">
-            <img src="./images/event.png" alt="Grand Fashion Hall" />
-          </div>
-          <div class="event-details">
-            <h3>Fashion Week Showcase</h3>
-            <p class="event-meta">🗓️ JULY 15-17, 2026</p>
-            <p class="event-meta">📍 Grand Fashion Hall, NYC</p>
-            <p class="event-desc">Exclusive showcase of our latest genre-transcending collections. Experience the future of fashion.</p>
-            <a href="#" class="cta-btn">Learn More</a>
-          </div>
+       <div class="event-grid">
+        <div class="event-img">
+          <img src="https://images.unsplash.com/photo-1532453288672-3a27e9be9efd?q=80&w=800&auto=format&fit=crop" alt="Fashion Week Showcase" />
         </div>
+        
+        <div class="event-details">
+          <h3>Fashion Week Showcase</h3>
+
+          <div class="event-icon-text">
+            <i class="fa-regular fa-calendar"></i>
+            <p>JULY 15-17, 2026</p>
+          </div>
+
+          <div class="event-icon-text">
+            <i class="fa-solid fa-location-dot"></i>
+            <p>Grand Fashion Hall, NYC</p>
+          </div>
+
+          <p class="event-desc">Exclusive showcase of our latest genre-transcending collections. Experience the future of fashion.</p>
+          <a href="#" class="cta-btn">Learn More</a>
+        </div>
+      </div>
         <div class="view-all-events">
-          <a href="#">View All Events &rarr;</a>
+          <a href="./events.html">View All Events &rarr;</a>
         </div>
       </section>
 

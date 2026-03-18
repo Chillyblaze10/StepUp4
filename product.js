@@ -142,11 +142,22 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  /* ── Top-bar Marquee Fallback ───────────────── */
-  const marquee = document.querySelector("marquee.top-bar");
-  if (marquee) {
-    marquee.setAttribute("scrollamount", "4");
-    marquee.setAttribute("behavior", "scroll");
-    marquee.setAttribute("direction", "left");
+  /* ── Dynamic Hero Backgrounds ───────────────── */
+  const heroSection = document.querySelector('.hero');
+  
+  if (heroSection) {
+    // Array of high-quality fashion CDN endpoints
+    const heroImages = [
+      "url('https://images.unsplash.com/photo-1490481651871-ab68de25d43d?q=80&w=2000&auto=format&fit=crop')", // Editorial clothes rack
+      "url('https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?q=80&w=2000&auto=format&fit=crop')", // High fashion street style
+      "url('https://images.unsplash.com/photo-1539109136881-3be0616acf4b?q=80&w=2000&auto=format&fit=crop')", // Runway context
+      "url('https://images.unsplash.com/photo-1445205170230-053b83016050?q=80&w=2000&auto=format&fit=crop')"  // Atelier/Fabric details
+    ];
+
+    // Generate a random integer between 0 and the length of the array
+    const randomIdx = Math.floor(Math.random() * heroImages.length);
+
+    // Inject the selected URL into the CSSOM custom property
+    heroSection.style.setProperty('--dynamic-hero', heroImages[randomIdx]);
   }
 });

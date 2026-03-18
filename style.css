@@ -30,18 +30,35 @@ body {
   overflow-x: hidden;
 }
 
-/* ── Top Bar ───────────────────────────────────── */
-.top-bar {
+/* ── Top Bar ─────── */
+.top-bar-container {
   background: #000;
   color: #fff;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 100%;
+  display: block;
+}
+
+.top-bar-ticker {
+  display: inline-block;
+  padding: 9px 0;
   font-size: 13px;
   letter-spacing: 0.1em;
-  padding: 9px 0;
   font-weight: 600;
   text-transform: uppercase;
-  display: block;
-  white-space: nowrap;
-  overflow: hidden;
+  padding-left: 100%; /* Pushes the text off-screen to the right initially */
+  animation: scrollTicker 18s linear infinite;
+}
+
+/* Translation from right to left */
+@keyframes scrollTicker {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(-100%, 0);
+  }
 }
 
 /* ── Header / Nav ──────────────────────────────── */
@@ -148,38 +165,47 @@ nav {
   transform: rotate(-45deg) translate(5px, -5px);
 }
 
-/* ── Hero ──────────────────────────────────────── */
+/* ── Global Hero Architecture ──────────────────── */
 .hero {
-  padding: 36px 48px 28px;
-  background-color: var(--hero-bg);
+  position: relative;
+  padding: 140px 48px;
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-image: linear-gradient(rgba(14, 13, 12, 0.6), rgba(14, 13, 12, 0.7)), var(--dynamic-hero, none);
+  background-size: cover;
+  /* background-position: top;  */
+  background-position: center 30%;
+  background-repeat: no-repeat;
+  background-color: var(--black); /* Fallback */
   animation: heroReveal 0.7s ease both;
+  color: #fff;
 }
 
-@keyframes heroReveal {
-  from {
-    opacity: 0;
-    transform: translateY(-14px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
 
 .hero h1 {
   font-family: "DM Sans", sans-serif;
-  font-size: clamp(30px, 4vw, 48px);
+  font-size: clamp(38px, 6vw, 64px); /* Slightly larger typography */
   font-weight: 800;
   letter-spacing: -0.01em;
   line-height: 1.1;
-  margin-bottom: 8px;
-  color: var(--text-main);
+  margin-bottom: 12px;
+  color: #ffffff; 
 }
 
 .hero p {
-  font-size: 13.5px;
-  color: var(--text-muted);
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.95); 
   font-weight: 400;
+  max-width: 660px;
+}
+
+
+.index-hero {
+  min-height: 80vh;
 }
 
 /* ── Filters ───────────────────────────────────── */
@@ -655,7 +681,7 @@ footer {
 .index-hero {
   text-align: center;
   padding: 80px 20px;
-  background-color: var(--hero-bg);
+  
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -671,13 +697,13 @@ footer {
 
 .cta-btn.outline {
   background: transparent;
-  color: var(--black);
-  border: 1px solid var(--black);
+  color: #fff;
+  border: 1.5px solid #fff;
 }
 
 .cta-btn.outline:hover {
-  background: var(--black);
-  color: #fff;
+  background: #fff;
+  color: var(--black);
 }
 
 /* Section Containers */
@@ -821,5 +847,413 @@ footer {
   }
   .section-container {
     padding: 60px 20px;
+  }
+}
+
+/* ── About Us Specific Styles & Utilities ────────────── */
+
+.about-text-block {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.about-text-block p {
+  font-size: 15px;
+  color: var(--text-muted);
+  line-height: 1.8;
+  margin-bottom: 24px;
+}
+
+.about-text-block p:last-child {
+  margin-bottom: 0;
+}
+
+/* Reusable Grids */
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+/* Card & Block Styles */
+.value-card {
+  background: #fff;
+  padding: 40px 32px;
+  border: 1px solid var(--warm-mid);
+  border-radius: 4px;
+  text-align: center;
+}
+
+.value-card h3 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 28px;
+  color: var(--text-main);
+  margin-bottom: 16px;
+}
+
+.value-card p {
+  font-size: 14px;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+.info-block h4 {
+  font-family: "DM Sans", sans-serif;
+  font-size: 18px;
+  color: var(--text-main);
+  margin-bottom: 12px;
+}
+
+.info-block p {
+  font-size: 14.5px;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+.info-block.boxed {
+  background: #fff;
+  padding: 32px;
+  border-radius: 4px;
+  border: 1px solid var(--warm-mid);
+}
+
+/* Story Split Layout */
+.story-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: center;
+}
+
+.story-img {
+  width: 100%;
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+}
+
+.story-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Icon Anchors */
+.card-icon {
+  font-size: 32px;
+  color: var(--accent);
+  margin-bottom: 24px;
+  display: block;
+}
+
+.card-icon-small {
+  font-size: 24px;
+  color: var(--accent);
+  margin-bottom: 16px;
+  display: block;
+}
+
+/* Interactive Card Micro-interactions */
+.interactive-card {
+  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), 
+              box-shadow 0.3s ease,
+              border-color 0.3s ease;
+}
+
+.interactive-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 16px 32px rgba(26, 23, 20, 0.08);
+  border-color: var(--accent);
+}
+
+/* Responsive Overrides */
+@media (max-width: 900px) {
+  .story-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  
+  .story-img {
+    max-height: 400px;
+  }
+}
+
+@media (max-width: 900px) {
+  .grid-3 {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .grid-2 {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ── Events Page Specific Styles ─────────────────────── */
+
+.pt-0 {
+  padding-top: 0 !important;
+}
+
+
+.event-block-wrapper {
+  
+  padding: 60px 48px;
+  border-radius: 4px;
+}
+
+.block-title {
+  text-align: center;
+  font-family: "DM Sans", sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 40px;
+  color: var(--text-main);
+}
+
+/* Event Metadata Layouts */
+.event-icon-text {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.event-icon-text span {
+  font-size: 16px;
+}
+
+.event-icon-text p {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-main);
+  margin: 0;
+}
+
+.event-icon-text.small p {
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--text-muted);
+}
+
+.event-icon-text.small span {
+  font-size: 14px;
+  opacity: 0.7;
+}
+
+/* Accent Button Variation */
+.cta-btn.accent-btn {
+  background-color: var(--accent);
+  color: #fff;
+}
+
+.cta-btn.accent-btn:hover {
+  background-color: var(--accent-dark);
+}
+
+/* Event Sub-cards */
+.event-card {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.event-card-img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  border-radius: 4px;
+}
+
+.event-card-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.event-card:hover .event-card-img img {
+  transform: scale(1.05);
+}
+
+.event-card-info h4 {
+  font-family: "DM Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--text-main);
+  margin-bottom: 16px;
+}
+
+.event-card-desc {
+  margin-top: 16px;
+  font-size: 13px;
+  line-height: 1.6;
+  color: var(--text-muted);
+}
+
+/* Responsive Overrides */
+@media (max-width: 768px) {
+  .event-block-wrapper {
+    padding: 40px 20px;
+  }
+}
+
+.event-icon-text i {
+  font-size: 15px;
+  color: var(--accent);
+  width: 18px;
+  text-align: center;
+}
+
+/* ── Forms & Contact Page Specific Styles ────────────── */
+
+.form-section-wrapper {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.form-container {
+  margin-bottom: 64px;
+}
+
+.form-title {
+  font-family: "DM Sans", sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 32px;
+  color: var(--text-main);
+}
+
+.form-divider {
+  border: none;
+  border-top: 1px solid var(--warm-mid);
+  margin: 64px 0;
+}
+
+/* Input Wrappers & Layout */
+.form-group {
+  margin-bottom: 24px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+/* Typography for Labels */
+.stepup-form label {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: var(--text-main);
+}
+
+/* Global Input Styling (.form-control) */
+.form-control {
+  width: 100%;
+  padding: 14px 16px;
+  font-family: "DM Sans", sans-serif;
+  font-size: 15px;
+  color: var(--text-main);
+  background-color: #fff;
+  border: 1px solid var(--warm-mid);
+  border-radius: 4px;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-control::placeholder {
+  color: var(--text-muted);
+  opacity: 0.6;
+}
+
+/* Form State Management (Focus) */
+.form-control:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(243, 142, 84, 0.15);
+}
+
+/* Specific Select Tweaks */
+select.form-control {
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 16px center;
+  background-size: 16px;
+  cursor: pointer;
+}
+
+textarea.form-control {
+  resize: vertical; 
+}
+
+/* Other Ways to Reach Us Banner */
+.contact-banner {
+  
+  padding: 56px 40px;
+  text-align: center;
+  border-radius: 4px;
+}
+
+.contact-banner h2 {
+  font-family: "DM Sans", sans-serif;
+  font-size: 24px;
+  margin-bottom: 32px;
+}
+
+.contact-methods {
+  display: flex;
+  justify-content: center;
+  gap: 48px;
+  flex-wrap: wrap;
+}
+
+.contact-method {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.contact-method i {
+  font-size: 18px;
+  color: var(--accent);
+}
+
+.contact-method a {
+  text-decoration: none;
+  color: var(--text-main);
+  font-weight: 600;
+  font-size: 15px;
+  transition: color 0.2s;
+}
+
+.contact-method a:hover {
+  color: var(--accent);
+}
+
+/* Responsive Overrides */
+@media (max-width: 600px) {
+  .form-row {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+  
+  .contact-methods {
+    flex-direction: column;
+    gap: 24px;
   }
 }

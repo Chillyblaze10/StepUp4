@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inquiries & Appointments – StepUp4</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=DM+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="top-bar-container">
+  <div class="top-bar-ticker">
+    StepUp4 Fashion Show – July 2026 &nbsp;|&nbsp; Book your styling appointment today &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+    StepUp4 Fashion Show – July 2026 &nbsp;|&nbsp; Book your styling appointment today
+  </div>
+</div>
+
+      <nav>
+        <div class="nav-logo">StepUp4</div>
+
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+
+        <ul class="nav-links" id="nav-links">
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="./product.html" >Collections</a></li>
+          <li><a href="./board.html">Board of Trustees</a></li>
+          <li><a href="./events.html">Events</a></li>
+          <li><a href="#" class="active">Inquiries & Appointments</a></li>
+          <li><a href="./about.html">About</a></li>
+        </ul>
+
+        <ul class="nav-icons">
+          <li><img src="./images/cart.svg" alt="Cart" /></li>
+          <li><img src="./images/profile.svg" alt="Profile" /></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero index-hero">
+        <h1>Inquiries & Appointments</h1>
+        <p>Get in touch with us or book your styling appointment.</p>
+      </section>
+
+      <section class="section-container form-section-wrapper fade-target">
+        
+        <div class="form-container">
+          <h2 class="form-title">Send an Inquiry</h2>
+          <form action="#" method="POST" class="stepup-form">
+            
+            <div class="form-group">
+              <label for="inquiry-name">Full Name</label>
+              <input type="text" id="inquiry-name" class="form-control" placeholder="Your Name" required />
+            </div>
+
+            <div class="form-group">
+              <label for="inquiry-email">Email Address</label>
+              <input type="email" id="inquiry-email" class="form-control" placeholder="your@email.com" required />
+            </div>
+
+            <div class="form-group">
+              <label for="inquiry-phone">Phone Number</label>
+              <input type="tel" id="inquiry-phone" class="form-control" placeholder="+234 8090000110" />
+            </div>
+
+            <div class="form-group">
+              <label for="inquiry-message">Message</label>
+              <textarea id="inquiry-message" class="form-control" rows="5" placeholder="Tell us about your inquiry..." required></textarea>
+            </div>
+
+            <button type="submit" class="cta-btn accent-btn">Submit Inquiry</button>
+          </form>
+        </div>
+
+        <hr class="form-divider" />
+
+        <div class="form-container">
+          <h2 class="form-title">Book an Appointment</h2>
+          <form action="#" method="POST" class="stepup-form">
+            
+            <div class="form-group">
+              <label for="appt-name">Full Name</label>
+              <input type="text" id="appt-name" class="form-control" placeholder="Your Name" required />
+            </div>
+
+            <div class="form-group">
+              <label for="appt-email">Email Address</label>
+              <input type="email" id="appt-email" class="form-control" placeholder="your@email.com" required />
+            </div>
+
+            <div class="form-group">
+              <label for="appt-phone">Phone Number</label>
+              <input type="tel" id="appt-phone" class="form-control" placeholder="+234 8090000110" required />
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="appt-date">Preferred Date</label>
+                <input type="date" id="appt-date" class="form-control" required />
+              </div>
+              <div class="form-group">
+                <label for="appt-time">Preferred Time</label>
+                <input type="time" id="appt-time" class="form-control" required />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="appt-service">Service Type</label>
+              <select id="appt-service" class="form-control" required>
+                <option value="" disabled selected>Select a Service</option>
+                <option value="custom-design">Custom Design</option>
+                <option value="personal-styling">Personal Styling</option>
+                <option value="bridal">Bridal Consultation</option>
+              </select>
+            </div>
+
+            <button type="submit" class="cta-btn accent-btn">Book Appointment</button>
+          </form>
+        </div>
+
+      </section>
+
+      <section class="section-container pt-0 fade-target">
+        <div class="contact-banner">
+          <h2>Other Ways To Reach Us</h2>
+          <div class="contact-methods">
+            <div class="contact-method">
+              <i class="fa-regular fa-envelope"></i>
+              <a href="mailto:hello@stepup4.com">hello@stepup4.com</a>
+            </div>
+            <div class="contact-method">
+              <i class="fa-solid fa-phone"></i>
+              <a href="tel:+2348090000110">+234 8090000110</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </main>
+    <footer>
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <div class="footer-logo">StepUp4</div>
+          <p>
+            Step into style with premium fashion, couture designs, and
+            professional styling services.
+          </p>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <p>hello@stepup4.com</p>
+          <p>+234 8090000110</p>
+        </div>
+        <div class="footer-col">
+          <h4>Follow Us</h4>
+          <div class="socials">
+            <a href="#">IG</a>
+            <a href="#">FB</a>
+            <a href="#">TW</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        © 2026 StepUp4 Fashion House. All rights reserved.
+      </div>
+    </footer>
+
+    <script src="./product.js"></script>
+  </body>
+</html>
