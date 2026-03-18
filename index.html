@@ -1,147 +1,200 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>StepUp4 - Premium Fashion House</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <div class="topbar">
-        StepUp4 Fashion Show - July 2026 | Book your styling appointment today
-    </div>
-<!-----------Navbar----------->
-    <div class="navbar">
-        <h2>StepUp4</h2>
-        <div class="nav-links">
-            <a href="index.html">Home</a>
-            <a href="#">Products</a>
-            <a href="#">Board of trustees</a>
-            <a href="#">Events</a>
-            <a href="#">Inquiries & Appointments</a>
-            <a href="pg 6.html">About</a>
-        </div>
-    </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home – StepUp4</title>
 
-    <!-----------Hero--------->
-    <div class="hero">
-        <h1>Elegance Refined</h1>
-        <p>Discover sophisticated fashion crafted for you</p>
-        <button class="btn">Explore</button>
-        <button class="btn-secondary">Appointments</button>
-    </div>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=DM+Sans:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="top-bar-container">
+  <div class="top-bar-ticker">
+    StepUp4 Fashion Show – July 2026 &nbsp;|&nbsp; Book your styling appointment today &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+    StepUp4 Fashion Show – July 2026 &nbsp;|&nbsp; Book your styling appointment today
+  </div>
+</div>
 
-    <!---------featured collection-->
-    <section class="featured-collection">
-        <h2>Featured Collection</h2>
+      <nav>
+        <div class="nav-logo">StepUp4</div>
 
-        <div class="cards-grid">
-            <div class="cards">
-                <img src="" alt="Photo 1">
-                <h4>CASUAL WEAR</h4>
-                <h4>Casual Elegance</h4>
-                <p>Modern everyday wear designed for comfort and style</p>
-            </div>
-
-            <div class="cards">
-                <img src="" alt="Photo 2">
-                <h4>CORPORATE WEAR</h4>
-                <h4>Corporate Excellence</h4>
-                <p>Professional suits perfect for the modern workspace</p>
-            </div>
-
-            <div class="cards">
-                <img src="" alt="Photo 3">
-                <h4>EVENING WEAR</h4>
-                <h4>Evening Glamour</h4>
-                <p>Stunning evening gowns for special occasions</p>
-            </div>
-        </div>
-    </section>
-
-    <!-----------featured event--------->
-    <section class="featured-event">
-        <div class="featured-event-image">
-            <img src="" alt="Photo 4">
-        </div>
-
-        <div class="featured-event-content">
-            <h3>Featured Event</h3>
-            <p>🗓️ JULY 15-17, 2026</p>
-            <p>📍 Grand Fashion Hall, NYC</p>
-            <br>
-            <p>Exclusive showcase of our latest collections</p>
-
-            <button class="btn">
-                <a href="#">Learn More</a>
-            </button>
-        </div>
-    </section>
-
-    <div class="view-all">
-        <a href="#">View All Events</a>
-    </div>
-
-    <!----------------Board----------->
-    <section class="board-section">
-        <h2 class="section-title">Meet Our Board</h2>
-        <div class="board-grid">
-            <div class="board-member">
-                <img src="" alt="Photo 5">
-                <h4>Chikeluba Modozie</h4>
-                <small>GROUP LEADER</small>
-                <p>10+ years in fashion design and innovation</p>
-            </div>
-
-            <div class="board-member">
-                <img src="" alt="photo 6">
-                <h4>Chinonso Onyewueke</h4>
-                <small>ASSISTANT GROUP LEADER</small>
-                <p>6+ years in fashion design and innovation</p>
-            </div>
-
-            <div class="board-member">
-                <img src="" alt="photo 7">
-                <h4>Abdullahi Biyaminu Itopa</h4>
-                <small>GROUP FASHION DESIGNER</small>
-                <p>6+ years in fashion design and innovation</p>
-            </div>
-        </div>
-    </section>
-
-    <!------------CTA--------------->
-    <div class="cta">
-        <h2>Need a Custom Outfit?</h2>
-        <p>Let our expert team help you find the perfect style for your occasion</p>
-        <button class="btn">
-            <a href="#">Book Appointment Today →</a>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
         </button>
-    </div>
 
-    <!---------footer---------->
-    <div class="footer-content">
-        <div class="footer">
-            <h4>StepUp4</h4>
-            <p>Step into style with premium fashion, custom designs, and professional styling services.</p>
+        <ul class="nav-links" id="nav-links">
+          <li><a href="./index.html" class="active">Home</a></li>
+          <li><a href="./product.html">Collections</a></li>
+          <li><a href="./board.html">Board of Trustees</a></li>
+          <li><a href="./events.html">Events</a></li>
+          <li><a href="./inquiries.html">Inquiries & Appointments</a></li>
+          <li><a href="./about.html">About</a></li>
+          
+          <li class="mobile-icons">
+            <img src="./images/cart.svg" alt="Cart" />
+            <img src="./images/profile.svg" alt="Profile" />
+          </li>
+        </ul>
+
+        <ul class="nav-icons desktop-icons">
+          <li><img src="./images/cart.svg" alt="Cart" /></li>
+          <li><img src="./images/profile.svg" alt="Profile" /></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero index-hero">
+        <h1>Elegance Refined</h1>
+        <p>Discover sophisticated fashion crafted for you.</p>
+        <div class="hero-actions">
+          <a href="./product.html" class="cta-btn">Explore</a>
+          <a href="./inquiries.html" class="cta-btn outline">Appointments</a>
         </div>
+      </section>
 
-        <div class="footer-contact">
-            <h4>Contact</h4>
-            <p>📧 hello@StepUp4.com</p>
-            <p>📞 0-80900000110</p>
+      <section class="section-container">
+        <h2 class="section-title">Featured Collection</h2>
+        
+        <div class="collection-grid">
+          <article class="card">
+            <div class="card-img-wrap">
+              <img src="./images/img1.png" alt="Casual Elegance" />
+            </div>
+            <div class="card-info">
+              <span class="card-tag">Casual Wear</span>
+              <h3>Casual Elegance</h3>
+              <p>Modern everyday wear designed for comfort and style.</p>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-img-wrap">
+              <img src="./images/img2.png" alt="Corporate Excellence" />
+            </div>
+            <div class="card-info">
+              <span class="card-tag">Corporate Wear</span>
+              <h3>Corporate Excellence</h3>
+              <p>Professional suits perfect for the modern workspace.</p>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-img-wrap">
+              <img src="./images/img3.png" alt="Evening Glamour" />
+            </div>
+            <div class="card-info">
+              <span class="card-tag">Evening Wear</span>
+              <h3>Evening Glamour</h3>
+              <p>Stunning evening gowns for special occasions.</p>
+            </div>
+          </article>
         </div>
+      </section>
 
-        <div class="footer-social">
-            <h4>Follow us</h4>
-            <p><a href="#">Facebook</a></p>
-            <p><a href="#">Instagram</a></p>
-            <p><a href="#">Twitter</a></p>
+      <section class="section-container">
+        <h2 class="section-title">Featured Event</h2>
+        
+       <div class="event-grid">
+        <div class="event-img">
+          <img src="https://images.unsplash.com/photo-1532453288672-3a27e9be9efd?q=80&w=800&auto=format&fit=crop" alt="Fashion Week Showcase" />
         </div>
-    </div>
+        
+        <div class="event-details">
+          <h3>Fashion Week Showcase</h3>
 
-    <div class="footer-bottom">
+          <div class="event-icon-text">
+            <i class="fa-regular fa-calendar"></i>
+            <p>JULY 15-17, 2026</p>
+          </div>
+
+          <div class="event-icon-text">
+            <i class="fa-solid fa-location-dot"></i>
+            <p>Grand Fashion Hall, NYC</p>
+          </div>
+
+          <p class="event-desc">Exclusive showcase of our latest genre-transcending collections. Experience the future of fashion.</p>
+          <a href="#" class="cta-btn">Learn More</a>
+        </div>
+      </div>
+        <div class="view-all-events">
+          <a href="./events.html">View All Events &rarr;</a>
+        </div>
+      </section>
+
+      <section class="section-container bg-light">
+        <h2 class="section-title">Meet Our Board</h2>
+        
+        <div class="board-grid">
+          <div class="board-member">
+            <img src="./images/TheChikelubaModozie.jpeg" alt="Chikeluba Modozie" />
+            <h4>Chikeluba Modozie</h4>
+            <span class="board-role">GROUP LEADER</span>
+            <p>10+ years in fashion design and innovation.</p>
+          </div>
+
+          <div class="board-member">
+            <img src="./images/Onyewueke Chinonso.jpeg" alt="Chinonso Onyewueke" />
+            <h4>Chinonso Onyewueke</h4>
+            <span class="board-role">Lead Developer</span>
+            <p>6+ years in fashion design and innovation.</p>
+          </div>
+
+          <div class="board-member">
+            <img src="./images/Boma Iyowusubo George.jpeg" alt="Boma Iyowusubo George" />
+            <h4>Boma Iyowusubo George</h4>
+            <span class="board-role">Creative Lead</span>
+            <p>6+ years in fashion design and innovation.</p>
+          </div>
+        </div>
+        <div class="view-all-events">
+          <a href="./board.html">Meet All Board Members &rarr;</a>
+        </div>
+      </section>
+
+      <section class="cta-section">
+        <h2>Need a Custom Outfit?</h2>
+        <p>Let our expert team help you find the perfect style for your occasion.</p>
+        <a href="./inquiries.html" class="cta-btn">Book Appointment Today &rarr;</a>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <div class="footer-logo">StepUp4</div>
+          <p>
+            Step into style with premium fashion, custom designs, and professional
+            styling services.
+          </p>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <p>hello@stepup4.com</p>
+          <p>+234 8090000110</p>
+        </div>
+        <div class="footer-col">
+          <h4>Follow Us</h4>
+          <div class="socials">
+            <a href="#">IG</a>
+            <a href="#">FB</a>
+            <a href="#">TW</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
         © 2026 StepUp4 Fashion House. All rights reserved.
-    </div>
+      </div>
+    </footer>
 
-</body>
+    <script src="./product.js"></script>
+  </body>
 </html>

@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Products – StepUp4</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=DM+Sans:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="top-bar-container">
+  <div class="top-bar-ticker">
+    StepUp4 Fashion Show – July 2026 &nbsp;|&nbsp; Book your styling appointment today &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+    StepUp4 Fashion Show – July 2026 &nbsp;|&nbsp; Book your styling appointment today
+  </div>
+</div>
+
+      <nav>
+        <div class="nav-logo">StepUp4</div>
+
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+
+        <ul class="nav-links" id="nav-links">
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="./product.html" class="active">Collections</a></li>
+          <li><a href="./board.html">Board of Trustees</a></li>
+          <li><a href="./events.html">Events</a></li>
+          <li><a href="./inquiries.html">Inquiries & Appointments</a></li>
+          <li><a href="./about.html">About</a></li>
+          
+          <li class="mobile-icons">
+            <img src="./images/cart.svg" alt="Cart" />
+            <img src="./images/profile.svg" alt="Profile" />
+          </li>
+        </ul>
+
+        <ul class="nav-icons desktop-icons">
+          <li><img src="./images/cart.svg" alt="Cart" /></li>
+          <li><img src="./images/profile.svg" alt="Profile" /></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <h1>Our Collection</h1>
+        <p>Discover our curated selection of genre-transcending apparel.</p>
+      </section>
+
+      <div class="filters">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="casual">Casual Wear</button>
+        <button class="filter-btn" data-filter="corporate">Corporate Wear</button>
+        <button class="filter-btn" data-filter="evening">Evening Wear</button>
+        <button class="filter-btn" data-filter="accessories">Accessories</button>
+      </div>
+
+      <section class="collection-grid" id="collection-grid">
+        <article class="card" data-category="casual">
+          <div class="card-img-wrap">
+            <img src="./images/img1.png" alt="Casual Elegance Jacket" loading="lazy" />
+            <div class="card-overlay">
+              <button class="quick-view">Quick View</button>
+            </div>
+          </div>
+          <div class="card-info">
+            <span class="card-tag">Casual Wear</span>
+            <h3>Casual Elegance Jacket</h3>
+            <p>Modern lightweight jacket perfect for everyday style</p>
+          </div>
+        </article>
+
+        <article class="card" data-category="corporate">
+          <div class="card-img-wrap">
+            <img src="./images/img2.png" alt="Professional Blazer" loading="lazy" />
+            <div class="card-overlay">
+              <button class="quick-view">Quick View</button>
+            </div>
+          </div>
+          <div class="card-info">
+            <span class="card-tag">Corporate Wear</span>
+            <h3>Professional Blazer</h3>
+            <p>Timeless blazer ideal for the corporate environment</p>
+          </div>
+        </article>
+
+        <article class="card" data-category="evening">
+          <div class="card-img-wrap">
+            <img src="./images/img3.png" alt="Evening Gown" loading="lazy" />
+            <div class="card-overlay">
+              <button class="quick-view">Quick View</button>
+            </div>
+          </div>
+          <div class="card-info">
+            <span class="card-tag">Evening Wear</span>
+            <h3>Evening Gown</h3>
+            <p>Stunning gowns for special occasions and events</p>
+          </div>
+        </article>
+
+        <article class="card" data-category="casual">
+          <div class="card-img-wrap">
+            <img src="./images/img4.png" alt="Casual Elegance Top" loading="lazy" />
+            <div class="card-overlay">
+              <button class="quick-view">Quick View</button>
+            </div>
+          </div>
+          <div class="card-info">
+            <span class="card-tag">Casual Wear</span>
+            <h3>Casual Elegance Top</h3>
+            <p>Comfortable yet stylish casual wear for everyday</p>
+          </div>
+        </article>
+
+        <article class="card" data-category="corporate">
+          <div class="card-img-wrap">
+            <img src="./images/img5.png" alt="Corporate Trousers" loading="lazy" />
+            <div class="card-overlay">
+              <button class="quick-view">Quick View</button>
+            </div>
+          </div>
+          <div class="card-info">
+            <span class="card-tag">Corporate Wear</span>
+            <h3>Corporate Trousers</h3>
+            <p>Well-tailored trousers for a polished look</p>
+            <span class="price">$186.00</span>
+          </div>
+        </article>
+
+        <article class="card" data-category="evening">
+          <div class="card-img-wrap">
+            <img src="./images/img6.png" alt="Cocktail Dress" loading="lazy" />
+            <div class="card-overlay">
+              <button class="quick-view">Quick View</button>
+            </div>
+          </div>
+          <div class="card-info">
+            <span class="card-tag">Evening Wear</span>
+            <h3>Cocktail Dress</h3>
+            <p>Elegant dress perfect for cocktail parties</p>
+          </div>
+        </article>
+
+        <article class="card" data-category="casual">
+          <div class="card-img-wrap">
+            <img src="./images/img7.png" alt="Casual Summer Collection" loading="lazy" />
+            <div class="card-overlay">
+              <button class="quick-view">Quick View</button>
+            </div>
+          </div>
+          <div class="card-info">
+            <span class="card-tag">Casual Wear</span>
+            <h3>Casual Summer Collection</h3>
+            <p>Light and breezy collection for summer season</p>
+          </div>
+        </article>
+
+        <article class="card" data-category="corporate">
+          <div class="card-img-wrap">
+            <img src="./images/img8.png" alt="Executive Collection" loading="lazy" />
+            <div class="card-overlay">
+              <button class="quick-view">Quick View</button>
+            </div>
+          </div>
+          <div class="card-info">
+            <span class="card-tag">Corporate Wear</span>
+            <h3>Executive Collection</h3>
+            <p>Premium corporate collection for executives</p>
+          </div>
+        </article>
+
+        <article class="card" data-category="evening">
+          <div class="card-img-wrap">
+            <img src="./images/img9.png" alt="Red Carpet Gown" loading="lazy" />
+            <div class="card-overlay">
+              <button class="quick-view">Quick View</button>
+            </div>
+          </div>
+          <div class="card-info">
+            <span class="card-tag">Evening Wear</span>
+            <h3>Red Carpet Gown</h3>
+            <p>Show-stopping gown for glamorous events</p>
+          </div>
+        </article>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <div class="footer-logo">StepUp4</div>
+          <p>
+            Step into style with premium fashion, couture designs, and
+            professional styling services.
+          </p>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <p>hello@stepup4.com</p>
+          <p>+234 8090000110</p>
+        </div>
+        <div class="footer-col">
+          <h4>Follow Us</h4>
+          <div class="socials">
+            <a href="#">IG</a>
+            <a href="#">FB</a>
+            <a href="#">TW</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        © 2026 StepUp4 Fashion House. All rights reserved.
+      </div>
+    </footer>
+
+    <script src="./product.js"></script>
+  </body>
+</html>
